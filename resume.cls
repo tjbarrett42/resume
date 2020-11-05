@@ -35,6 +35,7 @@
 \let \@addressthree \relax
 
 % \address command can be used to set the first, second, and third address (last 2 optional)
+
 \def \address #1{
   \@ifundefined{@addresstwo}{
     \def \@addresstwo {#1}
@@ -53,14 +54,15 @@
     \centerline{#1}
   \endgroup
   \par
-  \addressskip
+  % \addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
     \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+    % \nameskip
+    \break
   \endgroup
 }
 
@@ -86,12 +88,12 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-  \sectionskip
+  % \sectionskip
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{$\cdot$}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em}
+    \setlength{\leftmargin}{1em}
   }
   \item[]
 }{
