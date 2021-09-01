@@ -1,68 +1,119 @@
-\documentclass[letterpaper]{resume} % The style class
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
-\hyphenpenalty=100000
-\usepackage[letterpaper, total={6.5in,10in}]{geometry}
-\usepackage{setspace}
- 
+\documentclass[letterpaper,11pt]{article}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
 
-\name{Timothy James Barrett} % Your name
-% \address{North of the Wall, Outside the reach of every kingdom} 
-\address{9738307907 \\ timothy@jamesbarrett.us \\ linkedin.com/in/timjbarrett}
-\address{jamesbarrett.us \\ github.com/tjbarrett42} 
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+%\newcommand{\labelenumi}{\arabic
+%\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resheading}[1]{{{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
 \begin{document}
-\sloppy
 
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Timothy James Barrett}  & Email : timothy@jamesbarrett.us\\
+https://github.com/tjbarrett42 &  Mobile : +1-973-830-7907\\
+& Website : https://jamesbarrett.us
+\end{tabular*}
 
-\begin{rSection}{Education}
-{\bf Stevens Institute of Technology, Hoboken, NJ} 
-\hfill {\em September 2016 -- May 2020} 
-\\ Bachelor of Science, Computer Science\hfill { GPA: 3.095 }
-\\ {\bf Accolades:} Edwin A. Stevens Scholarship
-\\ {\bf Relevant Coursework:} Data Structures, Algorithms, Automata and Computation, Web Development I+II,
-Team Programming, Concurrent Programming, Database Management Systems, Agile Methods for Software Development, Human-Computer Interaction
+\resheading{\hspace{0em}\uline{\textsc{EDUCATION}\hfill}}
+\begin{itemize}[leftmargin=*]
+\item
+	\ressubheading{Stevens Institute of Technology}{Hoboken, NJ}{Bachelor of Science in Computer Science; GPA: 3.1}{Sep. 2016 - May 2020}
+\vspace{0.1in}
+\end{itemize}
 
-\end{rSection}
+\resheading{\hspace{0em}\uline{\textsc{WORK EXPERIENCE}\hfill}}
+\begin{itemize}[leftmargin=*]
+\item
+	\ressubheading{Allvue Systems}{New York, NY}{Application Engineer, Operations}{July 2020 - Present}
+	\begin{itemize}[leftmargin=*]
+		\item{Implemented Javascript Salesforce database search feature within proprietary Chrome extension increasing documentation cross-referencing productivity for 30 engineers, approved and managed through GitLab.}
+		\item{Wrote, tested, and deployed SQL scripts for client production environments to resolve trade data inconsistencies with back office providers.}
+		\item{Debugged product XSLT edge cases against custom client implementations to document defects and translate into consulting requests.}
+		%\item{Managed product expectations and functionality for client base of over 50 different hedge funds, firms, and investment banks through email and phone.}
+	\end{itemize}
 
-\begin{rSection}{Technical Skills}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{1.5ex}} l }
-Languages \ & Python, JavaScript, SQL, XSLT, XPath, Java, Kotlin, C++, C
-\\
-Technologies & Node.js, Express, Pandas, Scikit-learn, Tensorflow, Seaborn, Plotly, LaTeX\\
-Tools & SQL Server Management Studio, Android Studio, Git, TortoiseSVN \\
-Databases & MySQL, MongoDB
-\end{tabular}\end{rSection}
+\item
+	\ressubheading{New Jersey Innovation Institute}{Newark, NJ}{Project Assistant and Consultant, Innovation Services}{June 2019 - Aug. 2019}
+	\begin{itemize}[leftmargin=*]
+		\item{Created the project prioritization system for NJII's largest innovation product, a platform to encourage and support physician incubation of high ROI solutions in Hackensack Meridian Health’s internal workforce, securing a \$1,000,000 contract.}
+		%\item{Wrote business requirement documents and statements of work for product implementation.}
+		\item{Negotiated directly with client executives to ensure operation within project budgets.}
+		
+	\end{itemize}
 
-\begin{rSection}{Projects}
+\end{itemize}
 
-\begin{rSubsection}{jamesbarrett.us}{}{Personal website}{}
-	\item Designed a responsive single-page application in React for portolio projects and contact information utilizing the React-Router library.
-\end{rSubsection}
+\resheading{\hspace{0em}\uline{\textsc{PROJECTS}\hfill}}
+\begin{itemize}[leftmargin=*]
+\item
+	\ressubheading{jamesbarrett.us}{New York, NY}{Personal}{October 2020}
+	\begin{itemize}[leftmargin=*]
+		\item{Designed a responsive single-page application in React for portfolio projects and contact
+information utilizing the React-Router library.}
+		
+	\end{itemize}
+	
+\item
+	\ressubheading{Stevens Shuttle System}{Hoboken, NJ}{Student}{August 2019 - May 2020}
+	\begin{itemize}[leftmargin=*]
+		\item{Collaborated with students on Senior Design Project to create a user-friendly bus schedule application, increasing arrival time accuracy from 20 to 98 percent.}
+		\item{Used AWS Lambda operations to compile raw location data from third party bus API.}
+		\item{Utilized unsupervised machine learning to group bus arrival data and produce arrival time predictions within 2 minutes, accounting for popular stops, rushes, and day-to-day traffic ordinances.}
+		\item{Created a responsive React application to display predicted schedules for student use on both mobile and desktop devices.}
+	\end{itemize}
 
-\begin{rSubsection}{Agent-based Model of Infectious Disease}{}{Group final project for course in Quantitative Biology}{}
-	\item Designed a simulation in Python of autonomous interactions within a human population to closely model the 2014 West Africa ebola outbreak.
-	\item Implemented CSV exporting to compare datasets with variation in rates of infection, vaccination, density, and agent movement.
-\end{rSubsection}
+\item
+	\ressubheading{Agent-based Model of Infectious Disease}{Hoboken, NJ}{Student}{October 2019 - December 2019}
+	\begin{itemize}[leftmargin=*]
+		\item{Created a Python simulation to render the stages of the 2014 West Africa Ebola outbreak for a quantitative biology course final project.}
+		\item{Implemented agent-to-agent interaction such as rate of infection, vaccination effectiveness, and likelihood to evacuate impacted areas.
+}		
+		\item{Used CSV exporting and graphing libraries to visualize and compare simulation data through charts over time.}
+		
+	\end{itemize}
+	
+	
+\end{itemize}
 
-\end{rSection}
+\resheading{\hspace{0em}\uline{\textsc{TECHNICAL SKILLS}\hfill}}
 
-\begin{rSection}{Work Experience}
-
-\begin{rSubsection}{Allvue Systems}{\em July 2020 -- Present}{Application Engineer, Operations}{New York, NY}
-	\item Application engineer for front-to-back office credit solution with international client base.
-	\item Created SQL scripts to repair and prevent future portfolio data discrepancies with defensive programming.
-	\item Utilized XPath and Transact-SQL debugging queries to identify client and server errors in product code, XML response/request data and XSLTs.
-	\item Mapped and documented root cause assessments to decrease product defects.
-	\item Led daily stand ups to prioritize towards high severity implementation requests and fixes.
-	\item Advised and consulted clients on programming and architecture best practices.
-\end{rSubsection}
-
-\begin{rSubsection}{New Jersey Innovation Institute}{\em June 2019 -- August 2019}{Project Assistant and Consultant, Innovation Services}{Newark, NJ}
-	\item Developed and co-designed a solutions program to identify, incubate, and scale in-house innovation, reducing costs on physician operations within Hackensack Meridian Health’s hospital network.
-	\item Conveyed and translated product implementations with custom client executive goals to realize optimal pricing and marketing strategies.
- 
-\end{rSubsection}
-
-\end{rSection}
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Languages}  & SQL, Python, Javascript, XSLT, Kotlin, Apex (Salesforce)\\
+\textbf{\large Technologies \& Libraries}  & React, Node.js, AWS Lambda, Express, Pandas, Seaborn\\
+\textbf{\large Tools}  & SQL Server Management Studio, Webstorm, Visual Studio, Git, TortoiseSVN\\
+\textbf{\large Databases}  & MySQL, MongoDB, Firebase Realtime DB\\
+\end{tabular*}
 
 \end{document}
