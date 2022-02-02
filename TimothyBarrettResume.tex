@@ -14,6 +14,8 @@
 \usepackage[empty]{fullpage}
 \usepackage{color}
 \usepackage{hyperref}
+\usepackage{setspace}
+
 \definecolor{mygrey}{gray}{0.80}
 \raggedbottom
 \raggedright
@@ -42,86 +44,89 @@
 %-----------------------------------------------------------
 \begin{document}
 
+\begin{spacing}{1.2}
+
 \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 \textbf{\large Timothy James Barrett}  & Email : timothy@jamesbarrett.us\\
 \href{https://github.com/tjbarrett42}{https://github.com/tjbarrett42} &  Mobile : +1-973-830-7907\\
 & Website : \href{https://jamesbarrett.us}{https://jamesbarrett.us}
 \end{tabular*}
-\vspace{-0.2in}
+\vspace{-0.1in}
 
 \resheading{\hspace{0em}\uline{\textsc{EDUCATION}\hfill}}
-\vspace{-0.18in}
+\vspace{-0.2in}
 \begin{itemize}[leftmargin=*]
 	
 \item
 	\ressubheading{Stevens Institute of Technology}{Hoboken, NJ}{Bachelor of Science in Computer Science}{Sep. 2016 - May 2020}
 
 \end{itemize}
-\vspace{-0.05in}
+\vspace{-0.0in}
 
 \resheading{\hspace{0em}\uline{\textsc{WORK EXPERIENCE}\hfill}}
 \vspace{-0.2in}
 \begin{itemize}[leftmargin=*]
 \item
 	\ressubheading{Allvue Systems}{New York, NY}{Application Engineer, Operations}{July 2020 - Present}
-	\vspace{-0.1in}
+	\vspace{-0.05in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0em}
-		\item{Identified errors in XML response/request data, XSLT configurations, and product code -- resolved with XPath and SQL debugging queries.}
-		\item{Designed and delivered SQL scripts for client production environments to resolve trade data inconsistencies with back office providers.}
-		\item{Managed product expectations and functionality for client base of over 50 different hedge funds, firms, and investment banks through email and phone.}
-		\item{Implemented Salesforce database searching for proprietary Chrome extension increasing documentation cross-referencing productivity for 30 engineers.}
+		\item{Resolved errors in SQL procs, XML data, and XSLT configs with XPath and SQL debugging queries.}
+		\item{Designed scripts to resolve trade data inconsistencies in client production environments.}
+		\item{Improved ticket priotization process by implementing Salesforce database searching functionality.}
 	\end{itemize}
 	
 \item
 	\ressubheading{New Jersey Innovation Institute}{Newark, NJ}{Project Assistant and Consultant, Innovation Services}{June 2019 - Aug. 2019}
-	\vspace{-0.1in}
+	\vspace{-0.05in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0em}
 		\item{Created the project prioritization system for incubation of high ROI solutions within physician networks, securing a \$1,000,000 contract.}
-		\item{Negotiated directly with client executives to ensure operation within project budgets.}
 		
 	\end{itemize}
 
 \end{itemize}
+\vspace{-0.05in}
 
 \resheading{\hspace{0em}\uline{\textsc{PROJECTS}\hfill}}
 \vspace{-0.2in}
 
 \begin{itemize}[leftmargin=*]
 \item
-	\ressubheading{Workout Split Planner \href{https://exercise-planner.vercel.app}{(exercise-planner.vercel.app)}}{Haledon, NJ}{Personal}{January 2022}
-	\vspace{-0.1in}
+	\ressubheading{Workout Split Planner \href{https://exercise-planner.vercel.app}{(exercise-planner.vercel.app)}}{Haledon, NJ}{React, Material UI, react-beautiful-dnd, recharts, ExerciseDB API}{January 2022}
+	\vspace{-0.05in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0em}
-		\item{Deployed and managing a React interactive workout routine builder designed for optimizing and visualizing weekly exercise volume and timing with over 1300 exercises from the ExerciseDB API.}
-		\item{Modified the drag-and-drop library react-beautiful-dnd into controlled components to manipulate all states using efficiently using hooks.}
+		\item{Deployed and managing an interactive weekly exercise routine planner and optimizer.}
+		\item{Modified drag-and-drop library into controlled components to manipulate all states efficiently using hooks.}
 		\item{Utilized memoization to reduce render lag during client-side state updates.}
-		\item{Visualized aggregated routine data using responsive composed graphs from the recharts library.}
+		\item{Implemented recharts library to visualize aggregated routine data using composed graphs.}
 	\end{itemize}
 	
 \item
-	\ressubheading{Total Daily Expenditure Estimator \href{https://tdee-calculator.vercel.app}{(tdee-calculator.vercel.app)}}{Haledon, NJ}{Personal}{January 2022}
-	\vspace{-0.1in}
+	\ressubheading{Total Daily Expenditure Estimator \href{https://tdee-calculator.vercel.app}{(tdee-calculator.vercel.app)}}{Haledon, NJ}{React, Material UI}{January 2022}
+	\vspace{-0.05in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0em}
-		\item{Deployed a component-based React webapp for calculating caloric intake requirements based on human measurements using the Mifflin St-Jeor formula.}
-		\item{Utilized nested component mapping to efficiently list tables of macronutrient  splits (protein, carbs, fat) for weight maintenance, loss, and gain.}
-		\item{Worked with a base of over a dozen current users to implement new features and increase accuracy.}
+		\item{Deployed a webapp for calculating caloric intake requirements based on human measurements.}
+		\item{Utilized nested component mapping to list tables of macro ratios for weight maintenance, loss, and gain.}
+		\item{Worked with a base of over a dozen current users to implement feature requests and increase accuracy.}
 	\end{itemize}
 	
 \item
-	\ressubheading{Stevens Shuttle System}{Hoboken, NJ}{Student}{August 2019 - May 2020}
-	\vspace{-0.1in}
+	\ressubheading{Stevens Shuttle System}{Hoboken, NJ}{React, AWS Lambda, MongoDB}{August 2019 - May 2020}
+	\vspace{-0.05in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0em}
 		\item{Collaborated with students on Senior Design Project to create a user-friendly bus schedule application, increasing arrival time accuracy from 20 to 98 percent.}
 		\item{Exercised AWS Lambda operations to compile raw location data from third party bus API.}
 		\item{Utilized unsupervised machine learning to group bus data and predict arrivals within 2 minutes.}
-		\item{Built a responsive React application to display predicted schedules for student use on both mobile and desktop devices.}
+		\item{Built a responsive webapp to display predicted schedules for student use on both mobile and desktop devices.}
 	\end{itemize}
 	
 \end{itemize}
+
+\vspace{-0.05in}
 
 \resheading{\hspace{0em}\uline{\textsc{TECHNICAL SKILLS}\hfill}}
 
@@ -131,5 +136,7 @@
 \textbf{\large Tools}  & SQL Server Management Studio, Webstorm, Visual Studio, Git, TortoiseSVN\\
 \textbf{\large Databases}  & MySQL, MongoDB, Redis\\
 \end{tabular*}
+
+\end{spacing}
 
 \end{document}
