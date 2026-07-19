@@ -1,0 +1,125 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.2in}
+
+%-----------------------------------------------------------
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resheading}[1]{{{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}}
+
+%-----------------------------------------------------------
+\begin{document}
+
+\begin{spacing}{1.0}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Timothy James Barrett}  & Email : timothy@jamesbarrett.us\\
+\href{https://github.com/tjbarrett42}{github.com/tjbarrett42} &  Mobile : +1-973-830-7907\\
+& LinkedIn : \href{https://www.linkedin.com/in/timjbarrett/}{linkedin.com/in/timjbarrett}
+\end{tabular*}
+\vspace{-0in}
+
+\resheading{\hspace{0em}\uline{\textsc{WORK EXPERIENCE}\hfill}}
+\vspace{-0.15in}
+\begin{itemize}[leftmargin=*]
+
+\item[\raisebox{0.5\baselineskip}{\textbullet}]
+	\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
+		\textbf{CrossRefHVAC} \textnormal{--- \href{https://crossrefhvac.com}{crossrefhvac.com}} & 2026--Present \\
+		\textit{Founder \& Software Engineer, Barrett Technologies LLC} & \\
+		{\small\textit{Python, PostgreSQL/Supabase, Parquet, Next.js, TypeScript, pdfplumber, pytest, Vercel}} \\[0.05in]
+	\end{tabular*}
+	\vspace{0.0in}
+	\parbox{\linewidth}{HVAC/R equipment data platform: ingests manufacturer documentation and product APIs into normalized, cross-referenced, queryable data with per-field provenance.}
+	\vspace{-0.1in}
+	\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0.0em}
+		\item{Built a test-driven Python extraction pipeline (378 tests) turning dense manufacturer PDFs --- spec tables, nomenclature systems, model families --- into structured product data, with change-tracked acquisition of 100+ source documents via a lifecycle state machine.}
+		\item{Mapped an undocumented manufacturer product API using agent-assisted discovery, enumerating its full parameter space (680+ configurations, three brand catalogs, 27K+ SKUs) with convergence probes verifying complete coverage.}
+		\item{Built the ground-truth verification layer: pipeline outputs checked against an independent authoritative product index, with precision metrics and a persistent human-adjudication ledger; unverified data is blocked from promotion.}
+		\item{Designed an OLAP fact-table schema in PostgreSQL normalizing extracted specs into queryable facts and dimensions, validated against human-curated ground truth, with versioned columnar Parquet snapshots.}
+		\item{Built human-in-the-loop review tooling --- a PDF-overlay UI inspecting extraction results against the source document, each ruling persisting to the adjudication ledger --- so decisions are made once and reapplied automatically.}
+		\item{Serving the dataset through a REST API and an MCP server with per-field provenance --- every spec value traceable to its source document and page --- making the data directly queryable by AI agents and HVAC-focused chat tools.}
+	\end{itemize}
+
+\item[\raisebox{0.5\baselineskip}{\textbullet}]
+	\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
+		\textbf{No Plastic, No Problem.} \textnormal{--- \href{https://noplasticnoproblem.com}{noplasticnoproblem.com}} & 2023--Present \\
+		\textit{Founder} & \\
+		{\small\textit{Next.js, React, TypeScript, Tailwind, Sanity CMS, n8n, Claude API, PostHog, Sentry, Supabase, Vercel}} \\[0.05in]
+	\end{tabular*}
+	\vspace{0.0in}
+	\parbox{\linewidth}{Production affiliate content platform serving 10,000+ monthly users with 50+ brand partnerships.}
+	\vspace{-0.1in}
+	\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0.0em}
+		\item{Built and operate a production affiliate platform serving 10,000+ monthly users, with a custom TypeScript/Sanity pipeline managing 200+ content entities and a bidirectional Notion integration powering the full editorial workflow.}
+		\item{Built an end-to-end content automation pipeline using n8n, DataForSEO, and the Claude API, cutting SEO brief generation from hours to automated output and supporting a 3x increase in content throughput.}
+		\item{Reduced CDN request volume by 85\% and eliminated compute cost spikes by migrating to webhook-driven ISR revalidation, with automated search index regeneration triggered on every content publish.}
+		\item{Built a custom MCP server connecting Sanity and Notion as a live knowledge graph, giving AI workflows real-time access to article inventory and brand relationships for fully grounded content generation.}
+	\end{itemize}
+
+\item[\raisebox{0.5\baselineskip}{\textbullet}]
+	\ressubheading{Haven Technologies}{New York, NY}{Fullstack Software Engineer}{June 2022 - August 2023}
+	\vspace{-0.08in}
+	\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0.0em}
+        \item{Redesigned and rebuilt an insurance policy viewer into a scalable SaaS product using Angular, PostgreSQL, Node.js, and Express, with test coverage via Mocha, Chai, and Sinon.}
+		\item{Implemented NgRx for state management and centralized API call patterns, improving consistency and debuggability across the frontend codebase.}
+	\end{itemize}
+\item[\raisebox{0.5\baselineskip}{\textbullet}]
+	\ressubheading{Allvue Systems}{New York, NY}{Application Engineer, Operations}{July 2020 - May 2022}
+	\vspace{-0.08in}
+	\begin{itemize}[leftmargin=*]
+	\setlength\itemsep{0.0em}
+		\item{Resolved TSQL, XML, and XSLT errors in custom portfolio management software, improving reliability for B2B clients.}
+		\item{Wrote scripts to fix trade data and payment processing inconsistencies, ensuring accuracy in compliance assessments.}
+	\end{itemize}
+
+\end{itemize}
+\vspace{-0.0in}
+
+\resheading{\hspace{0em}\uline{\textsc{EDUCATION}\hfill}}
+\vspace{-0.15in}
+\begin{itemize}[leftmargin=*]
+\item[\raisebox{0.5\baselineskip}{\textbullet}]
+	\ressubheading{Stevens Institute of Technology}{Hoboken, NJ}{Bachelor of Science in Computer Science}{September 2016 - May 2020}
+
+\end{itemize}
+\vspace{-0.0in}
+
+\resheading{\hspace{0em}\uline{\textsc{TECHNICAL SKILLS}\hfill}}
+\vspace{-0.1in}
+
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+\textbf{Programming}  & TypeScript, JavaScript, Python, SQL, HTML/CSS \\
+\textbf{Frameworks \& Libs.}  & React, Next.js, Angular, Redux, NgRx, RxJS, Express, Node.js, Tailwind CSS \\
+\textbf{Tools}  & Git, GitHub, Vercel, Sanity, n8n, Sentry, PostHog, pytest, Vitest, pdfplumber, Docker, AWS, Jira \\
+\textbf{Data}  & PostgreSQL, Supabase, Parquet, MongoDB, Oracle, MySQL \\
+\end{tabular*}
+
+\end{spacing}
+
+\end{document}
