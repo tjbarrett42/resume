@@ -47,7 +47,7 @@
 
 \item[\raisebox{0.5\baselineskip}{\textbullet}]
 	\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
-		\textbf{CrossRefHVAC} \textnormal{--- \href{https://crossrefhvac.com}{crossrefhvac.com}} & 2026--Present \\
+		\textbf{CrossRefHVAC} \textnormal{$\cdot$ \href{https://crossrefhvac.com}{crossrefhvac.com}} & 2026--Present \\
 		\textit{Founder \& Software Engineer, Barrett Technologies LLC} & \\
 		{\small\textit{Python, PostgreSQL/Supabase, Parquet, Next.js, TypeScript, pdfplumber, pytest, Vercel}} \\[0.05in]
 	\end{tabular*}
@@ -56,17 +56,17 @@
 	\vspace{-0.1in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0.0em}
-		\item{Built a test-driven Python extraction pipeline (378 tests) turning dense manufacturer PDFs --- spec tables, nomenclature systems, model families --- into structured product data, with change-tracked acquisition of 100+ source documents via a lifecycle state machine.}
+		\item{Built a test-driven Python extraction pipeline (378 tests) turning dense manufacturer PDFs (spec tables, nomenclature systems, model families) into structured product data, with change-tracked acquisition of 100+ source documents via a lifecycle state machine.}
 		\item{Mapped an undocumented manufacturer product API using agent-assisted discovery, enumerating its full parameter space (680+ configurations, three brand catalogs, 27K+ SKUs) with convergence probes verifying complete coverage.}
 		\item{Built the ground-truth verification layer: pipeline outputs checked against an independent authoritative product index, with precision metrics and a persistent human-adjudication ledger; unverified data is blocked from promotion.}
 		\item{Designed an OLAP fact-table schema in PostgreSQL normalizing extracted specs into queryable facts and dimensions, validated against human-curated ground truth, with versioned columnar Parquet snapshots.}
-		\item{Built human-in-the-loop review tooling --- a PDF-overlay UI inspecting extraction results against the source document, each ruling persisting to the adjudication ledger --- so decisions are made once and reapplied automatically.}
-		\item{Serving the dataset through a REST API and an MCP server with per-field provenance --- every spec value traceable to its source document and page --- making the data directly queryable by AI agents and HVAC-focused chat tools.}
+		\item{Built human-in-the-loop review tooling: a PDF-overlay UI inspecting extraction results against the source document, with each ruling persisting to the adjudication ledger so decisions are made once and reapplied automatically.}
+		\item{Serving the dataset through a REST API and an MCP server with per-field provenance (every spec value traceable to its source document and page), making the data directly queryable by AI agents and HVAC-focused chat tools.}
 	\end{itemize}
 
 \item[\raisebox{0.5\baselineskip}{\textbullet}]
 	\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
-		\textbf{No Plastic, No Problem.} \textnormal{--- \href{https://noplasticnoproblem.com}{noplasticnoproblem.com}} & 2023--Present \\
+		\textbf{No Plastic, No Problem.} \textnormal{$\cdot$ \href{https://noplasticnoproblem.com}{noplasticnoproblem.com}} & 2023--Present \\
 		\textit{Founder} & \\
 		{\small\textit{Next.js, React, TypeScript, Tailwind, Sanity CMS, n8n, Claude API, PostHog, Sentry, Supabase, Vercel}} \\[0.05in]
 	\end{tabular*}
