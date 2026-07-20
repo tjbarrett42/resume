@@ -47,26 +47,26 @@
 
 \item[\raisebox{0.5\baselineskip}{\textbullet}]
 	\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
-		\textbf{CrossRefHVAC} \textnormal{$\cdot$ \href{https://crossrefhvac.com}{crossrefhvac.com}} & 2026--Present \\
+		\textbf{CrossRefHVAC} \textnormal{$\cdot$ \href{https://crossrefhvac.com}{crossrefhvac.com}} & 2026 - Present \\
 		\textit{Founder \& Software Engineer, Barrett Technologies LLC} & \\
 		{\small\textit{Python, PostgreSQL/Supabase, Parquet, Next.js, TypeScript, pdfplumber, pytest, Vercel}} \\[0.05in]
 	\end{tabular*}
 	\vspace{0.0in}
-	\parbox{\linewidth}{HVAC/R equipment data platform, launching publicly as SpecTrace. Turns manufacturer documentation and product APIs into cross-referenced, queryable data with per-field provenance, so machine extraction stays auditable at scale; coverage architecture sized for an 8M-fact, multi-brand catalog.}
+	\parbox{\linewidth}{HVAC/R equipment data platform, launching publicly as SpecTrace. Turns manufacturer documentation and product APIs into cross-referenced, queryable data with per-field provenance, so machine extraction stays auditable at scale. Coverage architecture is sized for an 8M-fact, multi-brand catalog.}
 	\vspace{-0.1in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0.0em}
-		\item{Built a test-driven Python pipeline (378 tests) that extracts structured product data from dense manufacturer PDFs: spec tables, nomenclature systems, and model families across 100+ change-tracked source documents.}
-		\item{Mapped an undocumented manufacturer product API via agent-assisted discovery: 684 configurations across three brand catalogs and 27K+ SKUs in the first vendor rollout, with convergence probes to prove full coverage.}
-		\item{Built ground-truth verification: pipeline output is checked against an independent product index, human rulings persist in an adjudication ledger, and unverified data cannot ship.}
+		\item{Built a test-driven Python pipeline (378 tests) that extracts structured product data from dense manufacturer PDFs across 100+ change-tracked source documents.}
+		\item{Mapped an undocumented manufacturer product API with agent-assisted discovery, indexing 27K+ SKUs across 684 configurations and three brand catalogs in the first vendor rollout.}
+		\item{Built ground-truth verification against an independent product index. Human rulings persist in an adjudication ledger and unverified data cannot ship.}
 		\item{Designed an OLAP fact-table schema in PostgreSQL, validated against human-curated ground truth and exported as versioned columnar Parquet snapshots.}
-		\item{Built a human-in-the-loop review UI that overlays extraction results on the source PDF; each ruling is recorded once and reapplied automatically.}
-		\item{Serve the dataset through a REST API and an MCP server; every value carries provenance to its source document and page, so AI agents can query equipment data with citations.}
+		\item{Built a human-in-the-loop review UI that overlays extraction results on the source PDF. Each ruling is recorded once and reapplied automatically.}
+		\item{Serve the dataset through a REST API and an MCP server. Every value carries provenance to its source page, so AI agents can query equipment data with citations.}
 	\end{itemize}
 
 \item[\raisebox{0.5\baselineskip}{\textbullet}]
 	\begin{tabular*}{7.3in}{l@{\extracolsep{\fill}}r}
-		\textbf{No Plastic, No Problem.} \textnormal{$\cdot$ \href{https://noplasticnoproblem.com}{noplasticnoproblem.com}} & 2023--Present \\
+		\textbf{No Plastic, No Problem.} \textnormal{$\cdot$ \href{https://noplasticnoproblem.com}{noplasticnoproblem.com}} & 2023 - Present \\
 		\textit{Founder} & \\
 		{\small\textit{Next.js, React, TypeScript, Tailwind, Sanity CMS, n8n, Claude API, PostHog, Sentry, Supabase, Vercel}} \\[0.05in]
 	\end{tabular*}
@@ -75,10 +75,10 @@
 	\vspace{-0.1in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0.0em}
-		\item{Built and operate a production affiliate platform serving 10,000+ monthly users, with a custom TypeScript/Sanity pipeline managing 200+ content entities and a bidirectional Notion integration powering the full editorial workflow.}
-		\item{Built an end-to-end content automation pipeline using n8n, DataForSEO, and the Claude API, cutting SEO brief generation from hours to automated output and supporting a 3x increase in content throughput.}
-		\item{Reduced CDN request volume by 85\% and eliminated compute cost spikes by migrating to webhook-driven ISR revalidation, with automated search index regeneration triggered on every content publish.}
-		\item{Built a custom MCP server connecting Sanity and Notion as a live knowledge graph, giving AI workflows real-time access to article inventory and brand relationships for fully grounded content generation.}
+		\item{Built and operate a production affiliate platform serving 10,000+ monthly users, with a Sanity content pipeline and a bidirectional Notion integration powering the editorial workflow.}
+		\item{Automated SEO brief generation end to end with n8n, DataForSEO, and the Claude API, supporting a 3x increase in content throughput.}
+		\item{Reduced CDN request volume by 85\% and eliminated compute cost spikes by migrating to webhook-driven ISR revalidation.}
+		\item{Built a custom MCP server connecting Sanity and Notion as a live knowledge graph, giving AI workflows real-time access to article inventory and brand relationships.}
 	\end{itemize}
 
 \item[\raisebox{0.5\baselineskip}{\textbullet}]
