@@ -52,12 +52,12 @@
 		{\small\textit{Python, PostgreSQL/Supabase, Parquet, Next.js, TypeScript, pdfplumber, pytest, Vercel}} \\[0.05in]
 	\end{tabular*}
 	\vspace{0.0in}
-	\parbox{\linewidth}{HVAC/R equipment data platform, launching publicly as SpecTrace. Turns manufacturer documentation and product APIs into cross-referenced, queryable data with per-field provenance, so machine extraction stays auditable at scale.}
+	\parbox{\linewidth}{HVAC/R equipment data platform, launching publicly as SpecTrace. Turns manufacturer documentation and product APIs into cross-referenced, queryable data with per-field provenance, so machine extraction stays auditable at scale; coverage architecture sized for an 8M-fact, multi-brand catalog.}
 	\vspace{-0.1in}
 	\begin{itemize}[leftmargin=*]
 	\setlength\itemsep{0.0em}
 		\item{Built a test-driven Python pipeline (378 tests) that extracts structured product data from dense manufacturer PDFs: spec tables, nomenclature systems, and model families across 100+ change-tracked source documents.}
-		\item{Mapped an undocumented manufacturer product API via agent-assisted discovery: 684 configurations across three brand catalogs and 27K+ SKUs, with convergence probes to prove full coverage.}
+		\item{Mapped an undocumented manufacturer product API via agent-assisted discovery: 684 configurations across three brand catalogs and 27K+ SKUs in the first vendor rollout, with convergence probes to prove full coverage.}
 		\item{Built ground-truth verification: pipeline output is checked against an independent product index, human rulings persist in an adjudication ledger, and unverified data cannot ship.}
 		\item{Designed an OLAP fact-table schema in PostgreSQL, validated against human-curated ground truth and exported as versioned columnar Parquet snapshots.}
 		\item{Built a human-in-the-loop review UI that overlays extraction results on the source PDF; each ruling is recorded once and reapplied automatically.}
